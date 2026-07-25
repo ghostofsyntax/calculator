@@ -39,7 +39,7 @@ function mulitplication(){
     return(a*b);
 }
 function division(){
-    if(b==0){
+    if(b===0){
         return"cannot divide by zero"
     }
     return(a/b);
