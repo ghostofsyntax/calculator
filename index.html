@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <h1>CALCULATOR</h1>
+  <div class="card machela">
+   <h1>CALCULATOR</h1> 
+    
+    <div class="calc"> 
+        <div class="display">
+           <input type="text" class="walkie" id="display" readonly>
+        </div>
+      </div>
+
+      <div class="keys">  
+        
+        <div class="card cruze">
+          <div class="clear">
+              <button class="btn clear" onclick="clearDisplay()">C</button>
+          </div>
+        </div>
+        
+        <div class="card cruze">
+          <div class="erase">
+              <button class="btn clear" onclick="deleteLastDisplay()">⌫</button>
+          </div>
+        </div>
+
+        <div class="card cruze">
+          <div class="percentage">
+              <button class="major" onclick="appendToDisplay('%')"  data-operator="%">%</button>
+          </div>
+        </div>
+
+        <div class="card cruze">
+          <div class="division">
+              <button class="major" onclick="appendToDisplay('/')"  data-operator="/">/</button>
+          </div>
+        </div>
+       
+        <div class="card cruze">
+          <div class="one">
+              <button class="major" onclick="appendToDisplay('1')">1</button>
+          </div>
+        </div>
+
+        <div class="card cruze">   
+          <div class="two">
+              <button class="major" onclick="appendToDisplay('2')">2</button>
+          </div>
+        </div>
+
+        <div class="card cruze">
+          <div class="three">
+              <button class="major" onclick="appendToDisplay('3')">3</button>
+          </div>
+        </div>
+        
+        <div class="card cruze">
+          <div class="multiplication">
+              <button class="major" onclick="appendToDisplay('*')"  data-operator="*">*</button>
+          </div>
+        </div>
+
+        <div class="card cruze">  
+          <div class="four">
+              <button class="major" onclick="appendToDisplay('4')">4</button>
+          </div>
+        </div>
+
+        <div class="card cruze">  
+          <div class="five">
+              <button class="major" onclick="appendToDisplay('5')">5</button>
+          </div>
+        </div>
+        
+        <div class="card cruze">
+           <div class="six">
+              <button class="major" onclick="appendToDisplay('6')">6</button>
+           </div>
+        </div>
+        
+        <div class="card cruze">
+          <div class="minus">
+              <button class="major" onclick="appendToDisplay('-')"  data-operator="-">-</button>
+          </div>
+        </div>
+      
+        <div class="card cruze">
+          <div class="seven">
+              <button class="major" onclick="appendToDisplay('7')">7</button>
+          </div>
+        </div>
+      
+        <div class="card cruze">
+          <div class="eight">
+              <button class="major" onclick="appendToDisplay('8')">8</button>
+           </div>
+        </div>
+      
+        <div class="card cruze">
+          <div class="nine">
+              <button class="major" onclick="appendToDisplay('9')">9</button>
+          </div>
+        </div>
+
+        <div class="card cruze">
+          <div class="addition">
+              <button class="major" onclick="appendToDisplay('+')" data-operator="+">+</button>
+          </div>
+        </div>
+
+        
+        <div class="card cruze">
+          <div class="dot">
+              <button class="major" onclick="appendToDisplay('.')">.</button>
+          </div>
+        </div>
+
+        
+        <div class="card cruze">
+          <div class="zero">
+              <button class="major" onclick="appendToDisplay('0')">0</button>
+          </div>
+        </div>
+
+        
+        <div class="card cruze">
+          <div class="scientific">
+              <button class="major">SC</button>
+          </div>
+        </div>
+
+        
+        <div class="card cruze">
+          <div class="equal-sign">
+              <button class="major" onclick="calculate()" rowspan="2">=</button>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+ </div>  
+ <script src="script.js"></script> 
+</body>
+</html>
