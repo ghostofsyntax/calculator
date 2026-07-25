@@ -1,6 +1,6 @@
 const display = document.getElementById("display");
 
-const buttons = document.querySelectorAll(".major");
+const buttons = document.querySelectorAll(".major"); 
 
 let currentInput = "";
 
@@ -15,11 +15,17 @@ function handleButton(event) {
 }
 
 function clearDisplay(){
+    currentInput=""
     display.value="";
 }
 
 function deleteLastDisplay(){
+    currentInput=""
     display.value=display.value.slice(0, -1)
+}
+
+function calculate(){
+
 }
 
 
@@ -33,6 +39,9 @@ function mulitplication(){
     return(a*b);
 }
 function division(){
+    if(b==0){
+        return"cannot divide by zero"
+    }
     return(a/b);
 }
 function clear(){
