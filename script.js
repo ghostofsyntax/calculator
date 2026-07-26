@@ -20,14 +20,18 @@ function clearDisplay(){
 }
 
 function deleteLastDisplay(){
-    currentInput=""
     display.value=display.value.slice(0, -1)
+    currentInput=display;
+
 }
 
 function calculate(){
-
+    try{
+        display.value= eval(display.value);
+    }catch{
+        display.value='error';
+  }
 }
-
 
 function add(){
     return(a+b);
