@@ -1,15 +1,9 @@
 const display = document.getElementById("display");
 
-const buttons = document.querySelectorAll(".major"); 
-
 let currentInput = "";
 
-buttons.forEach(function(button) {
-    button.addEventListener("click", handleButton);
-});
 
-function handleButton(event) {    
-    const value = event.target.textContent;
+function appendToDisplay(value){
     currentInput += value;
     display.value = currentInput;
 }
@@ -20,34 +14,68 @@ function clearDisplay(){
 }
 
 function deleteLastDisplay(){
-    display.value=display.value.slice(0, -1)
-    currentInput=display;
+    display.value=display.value.slice(0, -1);
+    display.value=currentInput;
 
 }
-
-function calculate(){
-    try{
-        display.value= eval(display.value);
-    }catch{
-        display.value='error';
-  }
+function add(a,b){
+    return a+b;
 }
 
-function add(){
-    return(a+b);
+function subtract(a,b){
+    return a-b;
 }
-function subtract(){
-    return(a+b);
+
+function multiplication(a,b){
+    return a*b;
 }
-function mulitplication(){
-    return(a*b);
-}
-function division(){
+
+function division(a,b){
     if(b===0){
-        return"cannot divide by zero"
+        return "error";
     }
-    return(a/b);
+    return a/b;
 }
-function clear(){
+function calculate(){
 
+    let expression = display.value;
+    
+    let operator;
+    
+    if(expression.includes("+")){
+        operator = "+";
+    }
+    else if(expression.includes("-")){
+        operator = "-";
+    }
+    else if(expression.includes("*")){
+        operator = "*";
+    }
+    else if(expression.includes("/")){
+        operator = "/";
+    }
+
+    let numbers = expression.split(operator);
+
+    let a = Number(numbers[0]);
+    let b = Number(numbers[1]);
+
+
+    if(operator === "+"){
+        display.value = add(a,b);
+    }
+
+    else if(operator === "-"){
+        display.value = subtract(a,b);
+    }
+
+    else if(operator === "*"){
+        display.value = multiplication(a,b);
+    }
+
+    else if(operator === "/"){
+        display.value = division(a,b);
+    }
 }
+   
+
