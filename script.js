@@ -15,7 +15,7 @@ function clearDisplay(){
 
 function deleteLastDisplay(){
     display.value=display.value.slice(0, -1);
-    display.value=currentInput;
+    currentInput=display.value
 
 }
 function add(a,b){
